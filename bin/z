@@ -1,0 +1,5 @@
+#! /bin/zsh
+
+# #! /Users/manuraj/.asdf/shims/ruby
+# ruby ./myScript.rb ${var1} ${var2} ${var3} ${var4}
+. cd $( ruby ../lib/z.rb $1 | fzf)
