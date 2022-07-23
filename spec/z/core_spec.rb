@@ -5,11 +5,11 @@ describe Z::Core do
   let(:ds) { instance_double(Z::DataStore) }
 
   it "stores the param with given data store" do
-    expect(ds).to receive(:fetch).with("code").and_return("~/user/code")
+    expect(ds).to receive(:fetch).with("code").and_return([["~/user/code"]])
 
     result = described_class.new(ds).recommendation("code")
 
-    expect(result).to eq("~/user/code")
+    expect(result).to eq(["~/user/code"])
   end
 
   it "returns path that matches param from data store" do

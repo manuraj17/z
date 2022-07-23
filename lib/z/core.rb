@@ -5,7 +5,7 @@ module Z
     end
 
     def recommendation(param)
-      @ds.fetch(param)
+      @ds.fetch(param).flatten
     end
 
     def store(param)

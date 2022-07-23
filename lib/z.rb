@@ -7,13 +7,23 @@ require_relative "z/data_store"
 module Z
   class Error < StandardError; end
 
-  def self.run(param)
+  DB_NAME = "z_ds.db"
+
+  def self.init
     ds = Z::DataStore.new
+    ds.load_database DB_NAME
+    ds.prepare_datastore
+  end
+
+  def self.run(param)
+    ds = DataStore.new
+    ds.load_database DB_NAME
     Z::Core.new(ds).recommendation(param)
   end
 
   def self.add(param)
     ds = Z::DataStore.new
+    ds.load_database DB_NAME
     Z::Core.new(ds).store(param)
   end
 end
