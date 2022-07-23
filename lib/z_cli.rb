@@ -33,4 +33,3 @@ module Z
   end
 end
 
-Z::Cli.start(ARGV)
