@@ -3,6 +3,7 @@ PATH
   specs:
     z (0.1.0)
       sqlite3 (~> 1.4.4)
+      thor (~> 1.2.1)
 
 GEM
   remote: https://rubygems.org/
@@ -45,6 +46,7 @@ GEM
       parser (>= 3.1.1.0)
     ruby-progressbar (1.11.0)
     sqlite3 (1.4.4)
+    thor (1.2.1)
     unicode-display_width (2.2.0)
 
 PLATFORMS
