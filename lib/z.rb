@@ -8,10 +8,11 @@ module Z
   class Error < StandardError; end
 
   DB_NAME = "z_ds.db"
+  DB_PATH = "#{Dir.home}/#{DB_NAME}"
 
   def self.init
     ds = Z::DataStore.new
-    ds.load_database DB_NAME
+    ds.load_database DB_PATH
     ds.prepare_datastore
   end
 
