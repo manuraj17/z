@@ -12,6 +12,10 @@ module Z
       @db.execute "select path from bookmarks where path like '%#{param}%'"
     end
 
+    def dump
+      @db.execute "select path from bookmarks"
+    end
+
     def prepare_datastore
       # Create a table
       # returns rows

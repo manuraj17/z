@@ -27,10 +27,10 @@ module Z
     ds.load_database DB_NAME
     Z::Core.new(ds).store(param)
   end
+
+  def self.all
+    ds = Z::DataStore.new
+    ds.load_database DB_NAME
+    Z::Core.new(ds).dump
+  end
 end
-
-# if ARGV[2] != "add"
-#   puts ARGV[3]
-# end
-
-

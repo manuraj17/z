@@ -11,5 +11,9 @@ module Z
     def store(param)
       @ds.store(param)
     end
+
+    def dump
+      @ds.dump
+    end
   end
 end
